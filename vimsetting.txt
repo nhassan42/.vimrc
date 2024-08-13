@@ -1,0 +1,65 @@
+" Enable syntax highlighting
+syntax on
+
+" Set line numbers
+set number
+
+
+" Enable mouse usage
+set mouse=a
+
+" Enable line wrapping
+set wrap
+
+" Set tab width
+set tabstop=4
+set shiftwidth=4
+set expandtab
+
+" Highlight search results
+set hlsearch
+
+" Incremental search
+set incsearch
+
+" Disable swap files
+set noswapfile
+
+" Show matching brackets
+set showmatch
+
+" Use the system clipboard
+set clipboard=unnamedplus
+
+"color schemes"
+
+"colorscheme desert"
+"colorscheme gruvbox"
+"colorscheme dracula"
+
+" Automatically compile and run C code on save
+autocmd BufWritePost *.c !cc % -o %< && ./%<
+
+call plug#begin('~/.vim/plugged')
+"color scheme plugsins"
+Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'morhetz/gruvbox'
+Plug 'altercation/vim-colors-solarized'
+
+" Example plugin: NERDTree for file navigation
+Plug 'preservim/nerdtree'
+
+" Example plugin: Vim-airline for a better status bar
+Plug 'vim-airline/vim-airline'
+
+" Example plugin: syntax highlighting for various languages
+Plug 'sheerun/vim-polyglot'
+" C and CPP cyntax plugin"
+Plug 'dense-analysis/ale'
+call plug#end()
+set background=dark
+"colorscheme solarized"
+
+"colorscheme desert"
+colorscheme gruvbox
+"coilorscheme dracula"
